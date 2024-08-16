@@ -1,8 +1,10 @@
-<!-- Agregar la clase home-container para aplicar el fondo -->
 <div class="home-container">
   <div class="buttons-container">
-    <button routerLink="/gestion">Ingresos y Gastos</button>
-    <button routerLink="/historial">Historial</button>
-    <button routerLink="/presupuestos">Presupuestos</button>
+    <button routerLink="/home/manage">Ingresos y Gastos</button>
+    <button routerLink="/home/history">Historico</button>
+    <button routerLink="/home/budgets">Presupuestos</button>
+    <button routerLink="/home">Inicio</button>
   </div>
 </div>
+
+<router-outlet />

@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-import { PresupuestosComponent } from '../presupuestos/presupuestos.component';
-import { HistorialComponent } from '../historial/historial.component';
-import { GestionComponent } from '../gestion/gestion.component';
+
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, RouterModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

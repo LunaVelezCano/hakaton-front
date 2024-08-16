@@ -1,29 +1,18 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { PresupuestosComponent } from './presupuestos/presupuestos.component';
-import { HistorialComponent } from './historial/historial.component';
-import { GestionComponent } from './gestion/gestion.component';
 
 export const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-    title: 'Inicio',
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.routes').then((routes) => routes.authRoutes),
   },
   {
-    path: '',
-    component: PresupuestosComponent,
-    title: 'Presupuestos',
+    path: 'home',
+    loadChildren: () =>
+      import('./home/home.routes').then((routes) => routes.homeRoutes),
   },
   {
-    path: '',
-    component: HistorialComponent,
-    title: 'Historial',
+    path: '**',
+    redirectTo: 'auth',
   },
-  {
-    path: '',
-    component: GestionComponent,
-    title: 'Gestion',
-  },
-
 ];
